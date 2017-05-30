@@ -1,4 +1,4 @@
-const {seqmap} = require('../lib/index')
+const seqmap = require('../lib/index')
 
 function asyncfn(seconds){
   return new Promise((resolve, reject) => {
