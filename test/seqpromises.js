@@ -1,9 +1,9 @@
 const seqmap = require('../lib/index')
 
-function asyncfn(seconds){
+function asyncfn(seconds, index){
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('Resolved after ' + seconds + 'seconds')
+      resolve(index + ': Resolved after ' + seconds + 'seconds')
     }, seconds*1000)
   })
 }
@@ -13,4 +13,4 @@ function logger(val){
 }
 
 
-seqmap([1,2], asyncfn, logger, () => { console.log('All promises resolved seqly') })
+seqmap([3,2], asyncfn, logger, () => { console.log('All promises resolved seqly') })
