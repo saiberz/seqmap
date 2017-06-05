@@ -1,6 +1,12 @@
 # seqmap
 Sequential map
 
+# Install
+
+```
+npm i -S seqmap
+```
+
 # Usage
 ```js
 
